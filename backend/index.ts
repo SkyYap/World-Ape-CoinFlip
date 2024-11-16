@@ -1,5 +1,6 @@
 import express from "express";
 
+// import { setupAuth } from "./src/auth";
 import { verifyHandler } from "./src/verify";
 import { initiatePaymentHandler } from "./src/initiate-payment";
 import { confirmPaymentHandler } from "./src/confirm-payment";
@@ -21,6 +22,9 @@ app.use((req, _res, next) => {
   console.log(`logger: ${req.method} ${req.url}`);
   next();
 });
+
+// Setup authentication
+// setupAuth(app);
 
 app.get("/ping", (_, res) => {
   res.send("minikit-example pong v1");
