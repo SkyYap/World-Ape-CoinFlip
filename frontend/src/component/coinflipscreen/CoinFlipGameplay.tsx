@@ -31,7 +31,7 @@ const CoinFlipGameplay = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Text color="white">WLD, ORB, ORO</Text>
+          <Text color="white">ORO</Text>
         </Flex>
 
         {/* <Box>
