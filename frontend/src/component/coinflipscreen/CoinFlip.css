@@ -1,8 +1,8 @@
 #coin {
   position: relative;
   margin: 0 auto;
-  width: 368px;
-  height: 368px;
+  width: 200px;
+  height: 200px;
 }
 
 #coin div {
@@ -24,14 +24,19 @@
 
 .side-a {
   background-image: url(../../resources/headImg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
 }
 
 .side-b {
   background-image: url(../../resources/tailImg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
   transform: rotateY(180deg);
-
 }
 
 #coin {
