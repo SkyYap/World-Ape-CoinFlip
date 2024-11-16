@@ -1,5 +1,5 @@
 import {useState } from "react";
-import { Box,Flex, Input, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 // import main_logo_apes from "resources/logo/ui_icon_coinfliplogo.png";
 import ChooseCoinComponent from "./ChooseCoinComponent.tsx";
 import ChooseAmountComponent from "./ChooseAmountComponent.tsx";
