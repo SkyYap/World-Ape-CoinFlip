@@ -19,12 +19,7 @@ const verifyPayload: VerifyCommandInput = {
   verification_level: VerificationLevel.Orb, // Orb | Device
 };
 
-interface VerifyBlockProps {
-  setShowVerify: (show: boolean) => void;
-  setShowContent: (show: boolean) => void;
-}
-
-export const VerifyBlock = ({ setShowVerify, setShowContent }: VerifyBlockProps) => {
+export const VerifyBlock = () => {
   const [handleVerifyResponse, setHandleVerifyResponse] = useState<
     MiniAppVerifyActionErrorPayload | IVerifyResponse | null
   >(null);
@@ -37,13 +32,16 @@ export const VerifyBlock = ({ setShowVerify, setShowContent }: VerifyBlockProps)
 
     const { finalPayload } = await MiniKit.commandsAsync.verify(verifyPayload);
 
+    // no need to verify if command errored
     if (finalPayload.status === "error") {
       console.log("Command error");
       console.log(finalPayload);
+
       setHandleVerifyResponse(finalPayload);
       return finalPayload;
     }
 
+    // Verify the proof in the backend
     const verifyResponse = await fetch(
       `${process.env.NEXTAUTH_URL}/api/verify`,
       {
@@ -52,25 +50,24 @@ export const VerifyBlock = ({ setShowVerify, setShowContent }: VerifyBlockProps)
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          payload: finalPayload as ISuccessResult,
+          payload: finalPayload as ISuccessResult, // Parses only the fields we need to verify
           action: verifyPayload.action,
-          signal: verifyPayload.signal,
+          signal: verifyPayload.signal, // Optional
         }),
       }
     );
 
+    // TODO: Handle Success!
     const verifyResponseJson = await verifyResponse.json();
 
     if (verifyResponseJson.status === 200) {
       console.log("Verification success!");
       console.log(finalPayload);
-      setShowVerify(false);
-      setShowContent(true);
     }
 
     setHandleVerifyResponse(verifyResponseJson);
     return verifyResponseJson;
-  }, [setShowVerify, setShowContent]);
+  }, []);
 
   return (
     <div>
