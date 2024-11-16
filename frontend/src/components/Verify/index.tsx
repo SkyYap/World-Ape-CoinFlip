@@ -71,11 +71,11 @@ export const VerifyBlock = () => {
 
   return (
     <div>
-      <h1>Verify Block</h1>
-      <button className="bg-green-500 p-4" onClick={handleVerify}>
-        Test Verify
+      <h1 style={{ color: 'white' }}>Verify Block</h1>
+      <button className="bg-[#074143] p-4 text-white" onClick={handleVerify}>
+        Verify
       </button>
-      <span>{JSON.stringify(handleVerifyResponse, null, 2)}</span>
+      <span style={{ color: 'white' }}>{JSON.stringify(handleVerifyResponse, null, 2)}</span>
     </div>
   );
 };
