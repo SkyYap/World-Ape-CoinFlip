@@ -54,6 +54,9 @@ importers:
       '@eslint/js':
         specifier: ^9.9.0
         version: 9.11.1
+      '@types/animejs':
+        specifier: ^3.1.12
+        version: 3.1.12
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.9
@@ -677,6 +680,9 @@ packages:
 
   '@swc/helpers@0.5.5':
     resolution: {integrity: sha512-KGYxvIOXcceOAbEk4bi/dVLEK9z8sZ0uBB3Il5b1rhfClSpcX0yfRO0KmTkqR2cnQDymwLB+25ZyMzICg/cm/A==}
+
+  '@types/animejs@3.1.12':
+    resolution: {integrity: sha512-fpdH+ZtlO0kqjTOqRaBdsEmvpRNOayI8k4EVkEtitL5l6wducDOXk0rgQgfZqWf/ZX9DzXrHf257S5i9xTcISQ==}
 
   '@types/babel__core@7.20.5':
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2582,6 +2588,8 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
       tslib: 2.4.0
+
+  '@types/animejs@3.1.12': {}
 
   '@types/babel__core@7.20.5':
     dependencies:
