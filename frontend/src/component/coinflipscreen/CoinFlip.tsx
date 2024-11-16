@@ -26,9 +26,13 @@ const CoinFlip = ({ result }) => {
   };
 
   return (
-    <div id="coin">
-      <div className="side-a"></div>
-      <div className="side-b"></div>
+    <div className="Card-container">
+      <div className="Card">
+        <div id="coin" key={+new Date()}>
+          <div className="side-a"></div>
+          <div className="side-b"></div>
+        </div>
+      </div>
     </div>
   );
 };
