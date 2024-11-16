@@ -1,4 +1,4 @@
-import { Image, VStack } from '@chakra-ui/react';
+import { Image, HStack } from '@chakra-ui/react';
 
 import HeadSelected from "../../resources/button/HeadSelected.png";
 import HeadNotSelected from "../../resources/button/HeadNotSelected.png";
@@ -14,10 +14,10 @@ const ChooseCoinComponent = ({ setHeadSelect, isHeadSelected }: { setHeadSelect:
     };
 
     return (
-        <VStack spacing={5} >
+        <HStack spacing={5} >
             <Image src={isHeadSelected ? HeadSelected : HeadNotSelected} onClick={() => toggling(true)} />
             <Image src={isHeadSelected ? TailNotSelected : TailSelected} onClick={() => toggling(false)} />
-        </VStack>
+        </HStack>
     )
 }
 

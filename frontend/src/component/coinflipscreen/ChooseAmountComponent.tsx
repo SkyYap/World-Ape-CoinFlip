@@ -5,8 +5,20 @@ import { solValue } from '../constant/SolValue';
 const ChooseAmountComponent = ({currentBoxValue, setCurrentBoxValue}: {currentBoxValue: any, setCurrentBoxValue: any}) => {
 
     return (
-        <Box height={'100%'} bgColor={'#074143'} pl={7} pt={10} pb={10} ml={3} mr={3} borderRadius={20}>
-            <Wrap h={'100%'} spacing='30px' width={'640px'} >
+        <Box 
+            height="100%" 
+            bgColor="#074143" 
+            px={{base: 4, md: 7}} 
+            py={10} 
+            mx={{base: 2, md: 3}} 
+            borderRadius={20}
+        >
+            <Wrap 
+                h="100%" 
+                spacing="30px" 
+                width={{base: "300px", sm: "400px", md: "640px"}}
+                justify="center"
+            >
                 {solValue.map((currentSol, index) => (
                     <WrapItem
                         key={index}
@@ -26,8 +38,12 @@ const ChooseAmountComponent = ({currentBoxValue, setCurrentBoxValue}: {currentBo
 
 const SelectionBox = ({ text }: { text: any }) => {
     return (
-        <Center width={'130px'} h='50px' bg='white'>
-            <Text as={'b'} color={'#074143'} fontWeight={'extrabold'} fontSize={20}>
+        <Center 
+            width={{base: "100px", md: "130px"}} 
+            h="50px" 
+            bg="white"
+        >
+            <Text as="b" color="#074143" fontWeight="extrabold" fontSize={{base: 16, md: 20}}>
                 {text}
             </Text>
         </Center>
@@ -36,8 +52,13 @@ const SelectionBox = ({ text }: { text: any }) => {
 
 const NonSelectionBox = ({ text }: { text: any }) => {
     return (
-        <Center width={'130px'} h='50px' bg='transparent' border={'solid 3px white'} >
-            <Text as={'b'} color={'white'} fontWeight={'extrabold'} fontSize={20}>
+        <Center 
+            width={{base: "100px", md: "130px"}} 
+            h="50px" 
+            bg="transparent" 
+            border="solid 3px white"
+        >
+            <Text as="b" color="white" fontWeight="extrabold" fontSize={{base: 16, md: 20}}>
                 {text}
             </Text>
         </Center>
