@@ -1,5 +1,5 @@
-import { PayBlock } from "./components/Pay";
-import { VerifyBlock } from "./components/Verify";
+// import { PayBlock } from "./components/Pay";
+// import { VerifyBlock } from "./components/Verify";
 import CoinFlipGameplay from "./component/coinflipscreen/CoinFlipGameplay";
 import { Flex } from '@chakra-ui/react';
 
