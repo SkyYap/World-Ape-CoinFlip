@@ -5,7 +5,7 @@ import { Flex } from '@chakra-ui/react';
 
 export default function App() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 gap-y-3">
+    <main className="flex min-h-screen flex-col items-center justify-center p-24 gap-y-3" style={{ backgroundColor: '#076A69' }}>
       <VerifyBlock />
       <PayBlock />
         <Flex width={'100%'} mt={10} mr={10} justifyContent={'flex-end'} alignItems={"flex-end"}>
