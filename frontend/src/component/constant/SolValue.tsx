@@ -5,11 +5,6 @@ export const solValue = [
         selected: true,
     },
     {
-        name: "0.25",
-        value: 0.25,
-        selected: false,
-    },
-    {
         name: "0.5",
         value: 0.5,
         selected: false,

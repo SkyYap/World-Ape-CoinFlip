@@ -34,7 +34,7 @@ const CoinFlipGameplay = () => {
           <Text color="white">WLD, ORB, ORO</Text>
         </Flex>
 
-        <Box>
+        {/* <Box>
           <Flex alignItems="center" pt={2}>
             <Flex mr={4}>
               <Text color={"white"} mr={"14px"} fontSize={12}>
@@ -63,7 +63,7 @@ const CoinFlipGameplay = () => {
               />
             </Flex>
           </Flex>
-        </Box>
+        </Box> */}
       </Flex>
 
       <Flex 
@@ -76,14 +76,16 @@ const CoinFlipGameplay = () => {
           isHeadSelected={isHeadSelected}
           setHeadSelect={setHeadSelect}
         />
-        <ChooseAmountComponent
-          setCurrentBoxValue={setCurrentBoxValue}
-          currentBoxValue={currentBoxValue}
-        />
-        <ButtonFlipCoin
-          setResult={setResult}
-          result={result}
-        />
+        <Flex flexDir="row" alignItems="center" gap={4}>
+          <ChooseAmountComponent
+            setCurrentBoxValue={setCurrentBoxValue}
+            currentBoxValue={currentBoxValue}
+          />
+          <ButtonFlipCoin
+            setResult={setResult}
+            result={result}
+          />
+        </Flex>
       </Flex>
     </Flex>
   );
