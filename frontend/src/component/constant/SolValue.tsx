@@ -19,24 +19,4 @@ export const solValue = [
         value: 1,
         selected: false,
     },
-    {
-        name: "2",
-        value: 2,
-        selected: false,
-    },
-    {
-        name: "3",
-        value: 3,
-        selected: false,
-    },
-    {
-        name: "4",
-        value: 4,
-        selected: false,
-    },
-    {
-        name: "5",
-        value: 5,
-        selected: false,
-    },
 ];

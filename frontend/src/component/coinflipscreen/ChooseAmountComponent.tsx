@@ -15,9 +15,11 @@ const ChooseAmountComponent = ({currentBoxValue, setCurrentBoxValue}: {currentBo
         >
             <Wrap 
                 h="100%" 
-                spacing="30px" 
-                width={{base: "300px", sm: "400px", md: "640px"}}
+                spacing="15px"
+                width={{base: "120px", sm: "140px", md: "150px"}}
                 justify="center"
+                direction="column"
+                align="center"
             >
                 {solValue.map((currentSol, index) => (
                     <WrapItem
