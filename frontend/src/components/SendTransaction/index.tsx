@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import DEXABI from '../../abi/DEX.json';
+import DEXABI from '../../abi/DEX.json';
 import { MiniKit } from '@worldcoin/minikit-js';
 
 export const SendTransaction = () => {
