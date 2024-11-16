@@ -112,7 +112,6 @@ span {
   border-radius: 10px;
   font-size: 14px;
 }
-
 @keyframes flipTails {
   0% {
     -webkit-transform: rotateY(0);
@@ -128,3 +127,4 @@ span {
     opacity: 1;
   }
 } */
+

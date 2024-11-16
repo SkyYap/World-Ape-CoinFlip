@@ -1,7 +1,10 @@
 import anime from "animejs";
 import React, { useState } from "react";
+import "./CoinFlip.css";
 
-import style from "./CoinFlip.css";
+interface CoinFlipProps {
+  result: string;
+}
 
 const CoinFlip = ({ result }) => {
   const coinSide = result;
@@ -23,17 +26,9 @@ const CoinFlip = ({ result }) => {
   };
 
   return (
-    <div class="Card-container">
-      <div class="Card">
-        <div id="coin" key={+new Date()}>
-          <div className="side-a">
-            {/* <span>Heads</span> */}
-          </div>
-          <div className="side-b">
-            {/* <span>Tails</span> */}
-          </div>
-        </div>
-      </div>
+    <div id="coin">
+      <div className="side-a"></div>
+      <div className="side-b"></div>
     </div>
   );
 };

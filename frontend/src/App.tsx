@@ -10,9 +10,9 @@ export default function App() {
       <VerifyBlock />
       <PayBlock />
         <Flex width={'100%'} mt={10} mr={10} justifyContent={'flex-end'} alignItems={"flex-end"}>
-          <Flex width={'225px'} height={'62px'} bgImage={panel_sol_amount} mr={10} justifyContent={'flex-end'} alignItems={"flex-end"} >
+          {/* <Flex width={'225px'} height={'62px'} bgImage={panel_sol_amount} mr={10} justifyContent={'flex-end'} alignItems={"flex-end"} >
               <Text as={'b'} color={'black'} mr={'30px'} mb={'5px'} fontSize={25}>SOL 0.0000</Text>
-          </Flex>
+          </Flex> */}
             {/* <Button
                 backgroundColor={'#555da8'}
                 height={'50px'}
