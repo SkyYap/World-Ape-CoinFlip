@@ -1,8 +1,8 @@
 import { Box, Text, Wrap, WrapItem, Center } from '@chakra-ui/react';
 import { solValue } from '../constant/SolValue';
-import { useState } from 'react';
+// import { useState } from 'react';
 
-const ChooseAmountComponent = ({currentBoxValue, setCurrentBoxValue}) => {
+const ChooseAmountComponent = ({currentBoxValue, setCurrentBoxValue}: {currentBoxValue: any, setCurrentBoxValue: any}) => {
 
     return (
         <Box height={'100%'} bgColor={'#074143'} pl={7} pt={10} pb={10} ml={3} mr={3} borderRadius={20}>
@@ -24,7 +24,7 @@ const ChooseAmountComponent = ({currentBoxValue, setCurrentBoxValue}) => {
     )
 }
 
-const SelectionBox = ({ text }) => {
+const SelectionBox = ({ text }: { text: any }) => {
     return (
         <Center width={'130px'} h='50px' bg='white'>
             <Text as={'b'} color={'#074143'} fontWeight={'extrabold'} fontSize={20}>
@@ -34,7 +34,7 @@ const SelectionBox = ({ text }) => {
     )
 }
 
-const NonSelectionBox = ({ text }) => {
+const NonSelectionBox = ({ text }: { text: any }) => {
     return (
         <Center width={'130px'} h='50px' bg='transparent' border={'solid 3px white'} >
             <Text as={'b'} color={'white'} fontWeight={'extrabold'} fontSize={20}>

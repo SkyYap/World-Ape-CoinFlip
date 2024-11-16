@@ -1,15 +1,13 @@
-import React, { useState } from 'react'
-
-import { Box, Flex, Image, Text, VStack } from '@chakra-ui/react';
+import { Image, VStack } from '@chakra-ui/react';
 
 import HeadSelected from "../../resources/button/HeadSelected.png";
 import HeadNotSelected from "../../resources/button/HeadNotSelected.png";
 import TailSelected from "../../resources/button/TailSelected.png";
 import TailNotSelected from "../../resources/button/TailNotSelected.png";
 
-const ChooseCoinComponent = ({ setHeadSelect, isHeadSelected }) => {
+const ChooseCoinComponent = ({ setHeadSelect, isHeadSelected }: { setHeadSelect: any, isHeadSelected: any }) => {
 
-    const toggling = (isHead) => {
+    const toggling = (isHead: any) => {
         if (isHead !== isHeadSelected) {
             setHeadSelect(!isHeadSelected)
         }

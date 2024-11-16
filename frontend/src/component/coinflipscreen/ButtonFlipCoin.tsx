@@ -1,13 +1,13 @@
 import { Image } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import FlipCoinBtn from "../../resources/button/FlipCoinBtn.png";
 import FlipPingCoinBtn from "../../resources/button/FlipPingCoinBtn.png";
 import anime from "animejs";
 
-const ButtonFlipCoin = ({ setFlipAnimation, result, setResult }) => {
+const ButtonFlipCoin = ({ result, setResult }: { result: any, setResult: any }) => {
   const [isDisabled, setIsDisabled] = useState(false);
 
-  const animFlipSend = (outcomeResult) => {
+  const animFlipSend = (outcomeResult: any) => {
     // console.log("outcomeResult " + outcomeResult)
     // console.log("result " + result)
     if (result == "heads") {
@@ -43,7 +43,7 @@ const ButtonFlipCoin = ({ setFlipAnimation, result, setResult }) => {
           rotateY: { value: animFlipSend(randomResult), delay: 300 },
           easing: "linear",
           duration: 1800,
-          complete: (a) => {
+          complete: () => {
             setIsDisabled(false);
             setResult(randomResult);
           },

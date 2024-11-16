@@ -1,8 +1,7 @@
 import { PayBlock } from "./components/Pay";
 import { VerifyBlock } from "./components/Verify";
 import CoinFlipGameplay from "./component/coinflipscreen/CoinFlipGameplay";
-import { Button, Flex, Text, Image, Box } from '@chakra-ui/react';
-import panel_sol_amount from "./resources/panel/ui_panel_sol.png";
+import { Flex } from '@chakra-ui/react';
 
 export default function App() {
   return (

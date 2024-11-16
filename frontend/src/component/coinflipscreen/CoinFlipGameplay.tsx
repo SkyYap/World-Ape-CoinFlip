@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { Box, Button, Flex, Image, Input, Text } from "@chakra-ui/react";
-import main_logo_apes from "resources/logo/ui_icon_coinfliplogo.png";
+import {useState } from "react";
+import { Box,Flex, Input, Text } from "@chakra-ui/react";
+// import main_logo_apes from "resources/logo/ui_icon_coinfliplogo.png";
 import ChooseCoinComponent from "./ChooseCoinComponent.tsx";
 import ChooseAmountComponent from "./ChooseAmountComponent.tsx";
 import ButtonFlipCoin from "./ButtonFlipCoin.tsx";
-import FlipCoinBtn from "resources/button/FlipCoinBtn.png";
+// import FlipCoinBtn from "resources/button/FlipCoinBtn.png";
 import CoinFlip from "./CoinFlip.tsx";
 import { solValue } from "../constant/SolValue.tsx";
 
@@ -13,11 +13,12 @@ const CoinFlipGameplay = () => {
   const [isHeadSelected, setHeadSelect] = useState(false);
 
   const [result, setResult] = useState("heads");
-  const [flipAnimation, setFlipAnimation] = useState(false);
+  // const [flipAnimation, setFlipAnimation] = useState(false);
 
   return (
     <Flex mb={10} flexDir="column">
-      <CoinFlip result={result} />
+      {/* <CoinFlip result={result} /> */}
+      <CoinFlip/>
       <Flex p={2} justifyContent={"center"}>
         <Flex
           backgroundColor={"#555da8"}
@@ -74,8 +75,8 @@ const CoinFlipGameplay = () => {
           currentBoxValue={currentBoxValue}
         />
         <ButtonFlipCoin
-          flipAnimation={flipAnimation}
-          setFlipAnimation={setFlipAnimation}
+          // flipAnimation={flipAnimation}
+          // setFlipAnimation={setFlipAnimation}
           setResult={setResult}
           result={result}
         />
