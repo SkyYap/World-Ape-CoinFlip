@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // import { PayBlock } from "./components/Pay";
 import { VerifyBlock } from "./components/Verify";
 import CoinFlipGameplay from "./component/coinflipscreen/CoinFlipGameplay";
@@ -7,17 +7,6 @@ import { Flex } from '@chakra-ui/react';
 export default function App() {
   const [showVerify, setShowVerify] = useState(true);
   const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    // After 8 seconds, hide verify block and show main content
-    const timer = setTimeout(() => {
-      setShowVerify(false);
-      setShowContent(true);
-    }, 8000);
-
-    // Cleanup timer
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <main 
@@ -30,7 +19,7 @@ export default function App() {
         px={{base: 4, md: 24}} 
         py={{base: 12, md: 24}}
       >
-        {showVerify && <VerifyBlock />}
+        {showVerify && <VerifyBlock setShowVerify={setShowVerify} setShowContent={setShowContent} />}
         
         {showContent && (
           <>
