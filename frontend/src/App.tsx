@@ -1,5 +1,5 @@
 // import { PayBlock } from "./components/Pay";
-// import { VerifyBlock } from "./components/Verify";
+import { VerifyBlock } from "./components/Verify";
 import CoinFlipGameplay from "./component/coinflipscreen/CoinFlipGameplay";
 import { Flex } from '@chakra-ui/react';
 
@@ -16,7 +16,7 @@ export default function App() {
         py={{base: 12, md: 24}}
       >
         <VerifyBlock />
-        <PayBlock />
+        {/* <PayBlock /> */}
         <Flex 
           width="100%" 
           mt={10} 
