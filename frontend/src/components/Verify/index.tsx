@@ -19,11 +19,7 @@ const verifyPayload: VerifyCommandInput = {
   verification_level: VerificationLevel.Orb, // Orb | Device
 };
 
-interface VerifyBlockProps {
-  onVerificationSuccess: () => void;
-}
-
-export const VerifyBlock: React.FC<VerifyBlockProps> = ({ onVerificationSuccess }) => {
+export const VerifyBlock = () => {
   const [handleVerifyResponse, setHandleVerifyResponse] = useState<
     MiniAppVerifyActionErrorPayload | IVerifyResponse | null
   >(null);
@@ -67,16 +63,15 @@ export const VerifyBlock: React.FC<VerifyBlockProps> = ({ onVerificationSuccess 
     if (verifyResponseJson.status === 200) {
       console.log("Verification success!");
       console.log(finalPayload);
-      onVerificationSuccess(); // Call the success callback
     }
 
     setHandleVerifyResponse(verifyResponseJson);
     return verifyResponseJson;
-  }, [onVerificationSuccess]); // Add onVerificationSuccess to dependencies
+  }, []);
 
   return (
     <div>
-      {/* <h1>Verify Block</h1> */}
+      <h1>Verify Block</h1>
       <button className="bg-green-500 p-4" onClick={handleVerify}>
         Test Verify
       </button>

@@ -7,13 +7,13 @@ import ButtonFlipCoin from "./ButtonFlipCoin.tsx";
 // import FlipCoinBtn from "resources/button/FlipCoinBtn.png";
 import CoinFlip from "./CoinFlip.tsx";
 import { solValue } from "../constant/SolValue.tsx";
-import { VerifyBlock } from "../../components/Verify/index.tsx";
 
 const CoinFlipGameplay = () => {
   const [currentBoxValue, setCurrentBoxValue] = useState(solValue[0].value);
   const [isHeadSelected, setHeadSelect] = useState(false);
+
   const [result, setResult] = useState("heads");
-  const [isVerified, setIsVerified] = useState(false);
+  // const [flipAnimation, setFlipAnimation] = useState(false);
 
   return (
     <Flex mb={5} flexDir="column" width="100%" px={4}>
@@ -31,35 +31,62 @@ const CoinFlipGameplay = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Text color="white">ORB</Text>
+          <Text color="white">ORO</Text>
         </Flex>
+
+        {/* <Box>
+          <Flex alignItems="center" pt={2}>
+            <Flex mr={4}>
+              <Text color={"white"} mr={"14px"} fontSize={12}>
+                MIN
+              </Text>
+              <Input
+                border={0}
+                borderRadius={20}
+                backgroundColor={"#303266"}
+                htmlSize={4}
+                width="auto"
+                height={"25px"}
+              />
+            </Flex>
+            <Flex>
+              <Text color={"white"} mr={"10px"} fontSize={12}>
+                MAX
+              </Text>
+              <Input
+                border={0}
+                borderRadius={20}
+                backgroundColor={"#303266"}
+                htmlSize={4}
+                width="auto"
+                height={"25px"}
+              />
+            </Flex>
+          </Flex>
+        </Box> */}
       </Flex>
 
-      {!isVerified ? (
-        <VerifyBlock onVerificationSuccess={() => setIsVerified(true)} />
-      ) : (
-        <Flex 
-          alignItems="center" 
-          flexDir={{base: "column", md: "row"}}
-          gap={{base: 6, md: 0}}
-          mt={{base: 2, md: 0}}
-        >
-          <ChooseCoinComponent
-            isHeadSelected={isHeadSelected}
-            setHeadSelect={setHeadSelect}
+      <Flex 
+        alignItems="center" 
+        flexDir={{base: "column", md: "row"}}
+        gap={{base: 6, md: 0}}
+        mt={{base: 2, md: 0}}
+      >
+        <ChooseCoinComponent
+          isHeadSelected={isHeadSelected}
+          setHeadSelect={setHeadSelect}
+        />
+        <Flex flexDir="row" alignItems="center" gap={4}>
+          <ChooseAmountComponent
+            setCurrentBoxValue={setCurrentBoxValue}
+            currentBoxValue={currentBoxValue}
           />
-          <Flex flexDir="row" alignItems="center" gap={4}>
-            <ChooseAmountComponent
-              setCurrentBoxValue={setCurrentBoxValue}
-              currentBoxValue={currentBoxValue}
-            />
-            <ButtonFlipCoin
-              setResult={setResult}
-              result={result}
-            />
-          </Flex>
+          <ButtonFlipCoin
+            setResult={setResult}
+            result={result}
+          />
         </Flex>
-      )}
+      </Flex>
     </Flex>
   );
 };
