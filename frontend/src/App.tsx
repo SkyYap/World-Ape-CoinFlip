@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <main 
-      className="flex min-h-screen flex-col items-center justify-center gap-y-3 overflow-x-hidden" 
+      className="flex min-h-screen flex-col items-center justify-center gap-y-3 overflow-x-hidden overflow-y-hidden" 
       style={{ backgroundColor: '#076A69' }}
     >
       <Flex 
