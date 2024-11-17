@@ -91,6 +91,9 @@ Contract:
 - Enhance UI/UX for a smoother experience.
 - Explore integrations with other blockchain networks (probably use LayerZero and add some cool features?)
 
+### Disclaimer
+The assets used in this project belongs to Utility Ape and was not created by me during the hackathon. I recycled this assets for this hackathon for learning purpose.
+
 I didn't use the below example as nginx 8080 port seems not working for me but I left it here for future reference.
 ```
 # React example of minikit
