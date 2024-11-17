@@ -46,22 +46,28 @@ yarn add
 Frontend:
 | Environment Variable      | Description                                 |
 |---------------------------|---------------------------------------------|
-| `APP_ID`                  | The application ID used for authentication. |
-| `DEV_PORTAL_API_KEY`      | The API key for accessing the developer portal. |
-| `WLD_CLIENT_ID`           | The client ID for interacting with the World API. |
+| `APP_ID`                  | The application ID used for authentication. (include app_) |
+| `DEV_PORTAL_API_KEY`      | The API key of developer portal. |
+| `WLD_CLIENT_ID`           | The client ID for interacting with the World API. (same as APP_ID currently) |
 | `WLD_CLIENT_SECRET`       | The client secret for the World API.        |
-| `NEXTAUTH_URL`            | The URL for Next.js authentication setup.  |
+| `NEXTAUTH_URL`            | The URL for deployed backend URL.  |
 
 
 Backend:
-WLD_CLIENT_ID=
-WLD_CLIENT_SECRET=
-AUTH_SECRET=
+| Environment Variable      | Description                                      |
+|---------------------------|--------------------------------------------------|
+| `WLD_CLIENT_ID`           | The client ID for interacting with the World API. |
+| `WLD_CLIENT_SECRET`       | The client secret for the World API.             |
+| `AUTH_SECRET`             | The secret key used for authentication purposes. |
+
 
 Contract:
-PRIVATE_KEY=
-WORLDCHAIN_SEPOLIA_RPC_URL=
-WORLDCHAIN_MAINNET_RPC_URL=
+| Environment Variable           | Description                                      |
+|---------------------------------|--------------------------------------------------|
+| `PRIVATE_KEY`                  | The private key for signing transactions.        |
+| `WORLDCHAIN_SEPOLIA_RPC_URL`   | The RPC URL for connecting to the WorldChain Sepolia network. |
+| `WORLDCHAIN_MAINNET_RPC_URL`   | The RPC URL for connecting to the WorldChain mainnet. |
+
 
 ### 4. Deploying
 Frontend:
