@@ -56,7 +56,7 @@ export default function App() {
             </Flex>
             <CoinFlipGameplay />
             <a 
-              href={`https://worldchain-sepolia.explorer.alchemy.com/address/0xF2f3AA389C215C0727710b77De960500bb10C93B`} 
+              href={`https://worldchain-sepolia.explorer.alchemy.com/address/0xF2f3AA389C215C0727710b77De960500bb10C93B?tab=contract`} 
               target="_blank" 
               rel="noopener noreferrer"
               style={{ 
