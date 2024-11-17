@@ -16,13 +16,13 @@ Before you start, ensure you have the following installed:
 - An World App Developer Account
 - (Attention: The frontend should always be opened via scanning the QR code obtained from the World App Developer Portal, via Camera so it is redirected to the World App to open. After frontend is updated, please close your World App to remove the previous cache and start loading fresh again.)
 
-1. Clone the Repository
+### 1. Clone the Repository
 ```
 git clone https://github.com/SkyYap/World-Ape-CoinFlip  
 cd world-ape-coinflip  
 ```
 
-2. Install Dependencies
+### 2. Install Dependencies
 Frontend:
 ```
 cd frontend
@@ -41,7 +41,7 @@ cd contract
 yarn add
 ```
 
-3. Configure Environment Variables
+### 3. Configure Environment Variables
 Frontend:
 APP_ID="INSERT_APPID"
 DEV_PORTAL_API_KEY="APIKEY"
@@ -59,7 +59,7 @@ PRIVATE_KEY=
 WORLDCHAIN_SEPOLIA_RPC_URL=
 WORLDCHAIN_MAINNET_RPC_URL=
 
-4. Deploying
+### 4. Deploying
 Frontend:
 Just run `pnpm run build` and then let render do the job for you
 
@@ -72,6 +72,11 @@ Contract:
 `truffle networks` to check the deployed contract address
 
 ### Summary
-Frontend: Available at http://localhost:5174
-Backend: Running at http://localhost:3000
-Contract: Deployed using Truffle
+- Frontend: Available at http://localhost:5174
+- Backend: Running at http://localhost:3000
+- Contract: Deployed using Truffle
+
+### Future Improvements
+- Add support for WORLD and ORB tokens.
+- Enhance UI/UX for a smoother experience.
+- Explore integrations with other blockchain networks (probably use LayerZero and add some cool features?)
