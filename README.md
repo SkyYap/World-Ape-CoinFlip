@@ -77,9 +77,9 @@ Backend:
 Just run `npm run start` and let render do the job for you
 
 Contract:
-`truffle compile`
-`truffle migrate --network worldchain`
-`truffle networks` to check the deployed contract address
+- `truffle compile`
+- `truffle migrate --network worldchain`
+- `truffle networks` to check the deployed contract address
 
 ### Summary
 - Frontend: Available at http://localhost:5174
