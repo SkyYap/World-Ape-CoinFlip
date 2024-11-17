@@ -55,6 +55,20 @@ export default function App() {
                 </Button> */}
             </Flex>
             <CoinFlipGameplay />
+            <a 
+              href={`https://worldchain-sepolia.explorer.alchemy.com/address/0xF2f3AA389C215C0727710b77De960500bb10C93B`} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style={{ 
+                color: '#074143', 
+                textDecoration: 'underline',
+                textAlign: 'center',
+                display: 'block',
+                marginTop: '20px'
+              }}
+            >
+              View Contract on Blockscout
+            </a>
           </>
         )}
       </Flex>
