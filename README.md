@@ -1,6 +1,8 @@
 # World Ape CoinFlip 🎲🐵
 
-## World Ape CoinFlip is an interactive coin flip game where users can bet using their ORO tokens. The game currently supports ORO, with future support for WORLD and ORB tokens in the pipeline. Built on the Worldcoin MiniKit React Template, it consists of three primary components:
+## World Ape CoinFlip is an interactive coin flip game where users can bet using their ORO tokens. 
+
+### The game currently supports ORO, with future support for WORLD and ORB tokens in the pipeline. Built on the Worldcoin MiniKit React Template, it consists of three primary components:
 
 1. Frontend: The user interface for players to interact with the game.
 2. Backend: Handles the API interactions.
