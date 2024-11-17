@@ -13,8 +13,7 @@
 Before you start, ensure you have the following installed:
 - Node.js (v18 or higher)
 - pnpm (v8 or higher)
-- A worldchain network RPC
-- An Alchemy API key
+- A worldchain network RPC (alchemy and thirdweb has free tiers)
 - An World App Developer Account
 - (Attention: The frontend should always be opened via scanning the QR code obtained from the World App Developer Portal, via Camera so it is redirected to the World App to open. After frontend is updated, please close your World App to remove the previous cache and start loading fresh again.)
 
@@ -45,11 +44,14 @@ yarn add
 
 ### 3. Configure Environment Variables
 Frontend:
-APP_ID="INSERT_APPID"
-DEV_PORTAL_API_KEY="APIKEY"
-WLD_CLIENT_ID=
-WLD_CLIENT_SECRET=
-NEXTAUTH_URL=http://localhost:3000
+| Environment Variable      | Description                                 |
+|---------------------------|---------------------------------------------|
+| `APP_ID`                  | The application ID used for authentication. |
+| `DEV_PORTAL_API_KEY`      | The API key for accessing the developer portal. |
+| `WLD_CLIENT_ID`           | The client ID for interacting with the World API. |
+| `WLD_CLIENT_SECRET`       | The client secret for the World API.        |
+| `NEXTAUTH_URL`            | The URL for Next.js authentication setup.  |
+
 
 Backend:
 WLD_CLIENT_ID=
